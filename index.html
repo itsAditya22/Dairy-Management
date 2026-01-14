@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dairy Management</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="brand">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l-6 5 2 7h8l2-7z"/><path d="M10 22v-8"/><path d="M14 22v-8"/><path d="M12 11v11"/></svg>
+            DairyFarm
+        </div>
+        <nav>
+            <div class="nav-item active" onclick="app.navigate('dashboard')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                Dashboard
+            </div>
+            <div class="nav-item" onclick="app.navigate('animals')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M7 17l-2 -4h-2"/><path d="M17 17l2 -4h2"/><path d="M7 13v-4h10v4"/></svg>
+                Animals
+            </div>
+            <div class="nav-item" onclick="app.navigate('milk')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 19l-2 2l-2 -2"/><path d="M2 12h6"/><path d="M14 2l6 14a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l6 -14Z"/></svg>
+                Milk Collection
+            </div>
+            <div class="nav-item" onclick="app.navigate('customers')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0 -3 -3.85"/></svg>
+                Customers
+            </div>
+            <div class="nav-item" onclick="app.navigate('expenses')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4h-6"/><path d="M12 18v-2"/><path d="M12 6v2"/></svg>
+                Expenses
+            </div>
+            <div class="nav-item" onclick="app.navigate('reports')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                Reports
+            </div>
+        </nav>
+    </aside>
+
+    <main>
+        <header>
+            <div style="display:flex; align-items:center;">
+                <button class="mobile-menu-btn" onclick="app.toggleSidebar()">☰</button>
+                <h2 id="page-title">Dashboard</h2>
+            </div>
+            <div>
+                <span id="current-date" class="text-gray" style="font-size: 0.9rem;"></span>
+            </div>
+        </header>
+
+        <div id="content" class="content-area">
+            <!-- Content Injected via JS -->
+        </div>
+    </main>
+
+    <!-- Generic Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Title</h3>
+                <button class="btn-sm btn-secondary" onclick="app.closeModal()">✕</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Form Injected via JS -->
+            </div>
+            <div class="modal-footer" id="modal-footer">
+                <!-- Buttons Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
